@@ -273,8 +273,8 @@ function MoviesDetails() {
                   More watch options
                 </button>
 
-                <div className="  bg-[black] relative rounded">
-                  <img src="/poster3.png" alt="poster" className="absolute" />
+                <div className="  bg-black relative rounded w-[360px]  h-[229px]" >
+                  {/* <img src="/poster3.png" alt="poster" className="absolute" /> */}
                   <span className="absolute text-white w-full bg-[#1212125e] font-medium text-sm flex justify-center items-center top-[171px] rounded-br-[10px] rounded-bl-[10px] h-[42px]">
                     The Best Movies and Shows in September
                   </span>
