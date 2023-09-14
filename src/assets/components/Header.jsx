@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Rating from "./Rating";
 
 function Header() {
+  const [search, setSearch] = useState("");
+  const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState({ title: "Loading Movies" });
+
+  useEffect(() => {
+    getData();
+  }, [search]);
+
+  const getData = () => {
+    const type = search ? "search" : "discover";
+    const query = search ? `query=${encodeURIComponent(search)}&` : "";
+    fetch(
+      `https://api.themoviedb.org/3/${type}/movie?${query}api_key=85ee1352dc115747a67526bdc0f29f44`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data); // You can log 'data' inside this block
+        setMovies(data.results);
+        if (data.results.length > 0) {
+          setMovie(data.results[0]); // Set the first movie as the selected movie
+        } else {
+          setMovie({ title: "No movies found" });
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching movie data:", error);
+      });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getData();
+  };
+
+
+
   return (
     <>
       <header className="w-w-screen  h-[600px]  ">
@@ -16,6 +52,8 @@ function Header() {
                 type="search"
                 name=""
                 id=""
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 placeholder="what do you want to watch?"
                 className="w-full px-[19px] py-[6px] bg-transparent border border-gray-400 rounded-md text-white placeholder-white "
               />
