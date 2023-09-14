@@ -26,9 +26,9 @@ function MoviesDetails() {
 
   return (
     <>
-      <div className="flex lg:flex-row flex-col">
+      <div className="flex lg:flex-row flex-col gap-5">
         <main className=" border-2 rounded-r-[48px] rounded-b-[48px] md:pt-12 pt-2  flex flex-col lg:w-[226px] w-full items-center">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-5">
             <img src="/tv.png" alt="logo" />
             <h4 className="text-lg lg:text-[24px] font-semibold">MovieBox</h4>
           </div>
@@ -134,7 +134,7 @@ function MoviesDetails() {
             </h3>
           </span>
         </main>
-        <main className="md:px-10 px-5 ">
+        <main className="  ">
           <div className="relative mt-6 w-full bg-black rounded-[20px] h-[449px] ">
             <div className="absolute top-[35%] left-[45%]  ">
               <span className="md:w-[110px] md:h-[110px] w-[50px] h-[50px] rounded-full bg-[#e8e8e859]  flex justify-center items-center ">
