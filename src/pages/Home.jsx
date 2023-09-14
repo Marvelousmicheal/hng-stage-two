@@ -150,7 +150,7 @@ function Home() {
         <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
           {movies.map((movie, index) => (
             <Link to={`/movie/${movie.id}`} key={index}>
-              <Card key={index} {...movie} />
+              <Card key={index} {...movie}  data-testid={ movie-card} />
             </Link>
           ))}
         </article>

@@ -169,24 +169,24 @@ function MoviesDetails() {
             <div className="flex justify-between items-center my-5 flex-col md:flex-row  ">
               <main className="flex items-center space-x-3 md:flex-row flex-col">
                 <h4 className="font-normal md:text-2xl text-base  space-x-1 lg:space-x-3">
-                  <span>
+                  <span data-testid={ movie-title}>
                     {currentMovieDetail
                       ? currentMovieDetail.original_title
                       : ""}
                   </span>{" "}
-                  <span>
+                  <span data-testid={ movie-release-date}>
                     •{" "}
                     {currentMovieDetail
                       ? new Date(currentMovieDetail.release_date).getFullYear()
                       : ""}
                   </span>
-                  <span>
+                  <span data-testid={ movie-overview}>
                     •{" "}
                     {currentMovieDetail
                       ? (currentMovieDetail.adult = "PG-13")
                       : "PG-18"}
                   </span>{" "}
-                  <span>
+                  <span  data-testid={ movie-runtime}>
                     •{" "}
                     {currentMovieDetail
                       ? currentMovieDetail.runtime + " mins"

@@ -11,9 +11,9 @@ function Card({title, poster_path, release_date,id }) {
   return (
     <>
     
-      <main className=" w-full lg:w-[250px] cursor-pointer">
+      <main className=" w-full lg:w-[250px] cursor-pointer" >
         <div className="w-full lg:w-[250px] h-[370px] relative">
-          <img src={imageUrl} alt="" className="w-full h-full" />
+          <img src={imageUrl} alt="" className="w-full h-full" data-testid={ movie-poster} />
           <div className="absolute top-0 flex justify-between w-full px-4 mt-4">
             <span className="px-[8px] py-[3px] bg-[#f3f4f69f] rounded-xl text-xs font-bold uppercase flex items-center justify-center">
               tv series
@@ -38,8 +38,8 @@ function Card({title, poster_path, release_date,id }) {
             </span>
           </div>
         </div>
-        <p className="font-bold text-xs text-gray-400 mt-3 ">USA, {releaseYear} - Current</p>
-        <h3 className="font-bold text-lg mt-6 mb-4" >{title}</h3>
+        <p className="font-bold text-xs text-gray-400 mt-3 " data-testid={ movie-release-date}>USA, {releaseYear} - Current</p>
+        <h3 className="font-bold text-lg mt-6 mb-4" data-testid={movie-title}>{title}</h3>
 
         <Rating />
 
