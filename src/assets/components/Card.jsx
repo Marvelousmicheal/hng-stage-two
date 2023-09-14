@@ -10,9 +10,9 @@ function Card({title, poster_path, release_date,id }) {
 
   return (
     <>
-    <p>{id}</p>
-      <main className="w-[250px] cursor-pointer">
-        <div className="w-[250px] h-[370px] relative">
+    
+      <main className=" w-full lg:w-[250px] cursor-pointer">
+        <div className="w-full lg:w-[250px] h-[370px] relative">
           <img src={imageUrl} alt="" className="w-full h-full" />
           <div className="absolute top-0 flex justify-between w-full px-4 mt-4">
             <span className="px-[8px] py-[3px] bg-[#f3f4f69f] rounded-xl text-xs font-bold uppercase flex items-center justify-center">

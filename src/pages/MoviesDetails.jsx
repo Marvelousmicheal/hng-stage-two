@@ -26,15 +26,15 @@ function MoviesDetails() {
 
   return (
     <>
-      <div className="flex">
-        <main className=" border-2 rounded-r-[48px] rounded-b-[48px] pt-12 px-6">
+      <div className="flex lg:flex-row flex-col">
+        <main className=" border-2 rounded-r-[48px] rounded-b-[48px] md:pt-12 pt-2  flex flex-col lg:w-[226px] w-full items-center">
           <div className="flex items-center gap-6">
             <img src="/tv.png" alt="logo" />
-            <h4 className="text-[24px] font-semibold">MovieBox</h4>
+            <h4 className="text-lg lg:text-[24px] font-semibold">MovieBox</h4>
           </div>
-          <div className="mt-16 w-full flex flex-col justify-center items-center gap-10">
-            <ul className="w-full flex flex-col justify-center items-center gap-10 text-xl font-semibold text-[#666666]">
-              <li className="flex gap-4 items-center w-full ">
+          <div className="md:mt-16 mt-4 w-full flex flex-col  justify-center items-center gap-10">
+            <ul className="w-full flex lg:flex-col flex-row justify-center items-center md:gap-10 lg:text-xl text-xs gap-4   font-semibold text-[#666666]">
+              <li className="flex gap-4  w-full h-[86px] justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -51,7 +51,7 @@ function MoviesDetails() {
                 </svg>
                 Home
               </li>
-              <li className="flex gap-4 items-center w-full ">
+              <li className="flex lg:gap-4 gap-2 items-center w-full bg-[#be123d25] md:border-r-8 md:border-r-[#BE123C] md:h-[86px] h-[40px]  border-b-[#BE123C] border-b-8 lg:border-b-0  text-[#BE123C] justify-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -67,7 +67,7 @@ function MoviesDetails() {
                 </svg>
                 Movies
               </li>
-              <li className="flex gap-4 items-center w-full ">
+              <li className="flex gap-4 items-center w-full h-[86px] justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -84,7 +84,7 @@ function MoviesDetails() {
                 </svg>
                 Tv series
               </li>
-              <li className="flex gap-4 items-center w-full ">
+              <li className="flex gap-4 items-center w-full justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -103,7 +103,7 @@ function MoviesDetails() {
               </li>
             </ul>
           </div>
-          <div className="mb-10 w-[170px] h-[210px] px-3 py-9 border border-[#BE123C] bg-[#F8E7EB] rounded-3xl mt-16 flex flex-col items-center justify-center">
+          <div className="mb-10 md:w-[170px] w-full h-[210px] px-3 py-9 border border-[#BE123C] bg-[#F8E7EB] rounded-3xl md:mt-16 mt-6 flex flex-col items-center justify-center">
             <h5 className="font-semibold text-base text-[#333333]">
               Play movie quizes and earn <br /> free tickets
             </h5>
@@ -115,7 +115,7 @@ function MoviesDetails() {
             </button>
           </div>
           <span className="w-full flex items-center justify-center mb-11">
-            <h3 className="text-xl font-semibold text-[#666666] flex items-center w-full gap-4 ">
+            <h3 className="md:text-xl text-base font-semibold text-[#666666] flex items-center w-full gap-4 justify-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -134,17 +134,17 @@ function MoviesDetails() {
             </h3>
           </span>
         </main>
-        <main className="px-10 ">
-          <div className="relative mt-6 w-full ">
-            <div className="absolute top-[35%] left-[45%] ">
-              <span className="w-[110px] h-[110px] rounded-full bg-[#e8e8e859]  flex justify-center items-center ">
+        <main className="md:px-10 px-5 ">
+          <div className="relative mt-6 w-full bg-black rounded-[20px] h-[449px] ">
+            <div className="absolute top-[35%] left-[45%]  ">
+              <span className="md:w-[110px] md:h-[110px] w-[50px] h-[50px] rounded-full bg-[#e8e8e859]  flex justify-center items-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="white"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="white"
-                  className="w-14 h-14"
+                  className="w-7 h-7 lg:w-12 lg:h-12"
                 >
                   <path
                     strokeLinecap="round"
@@ -153,11 +153,12 @@ function MoviesDetails() {
                   />
                 </svg>
               </span>
-              <h4 className="font-medium text-2xl text-[#E8E8E8]">
+              <h4 className="font-medium md:text-2xl text-base  text-white">
                 Watch Trailer
               </h4>
             </div>
             <img
+            className="w-full h-full rounded-[20px] object-cover"
               src={`https://image.tmdb.org/t/p/original${
                 currentMovieDetail ? currentMovieDetail.backdrop_path : ""
               }`}
@@ -165,9 +166,9 @@ function MoviesDetails() {
             />
           </div>
           <div>
-            <div className="flex justify-between items-center my-5 ">
-              <main className="flex items-center space-x-3 ">
-                <h4 className="font-normal text-2xl space-x-3">
+            <div className="flex justify-between items-center my-5 flex-col md:flex-row  ">
+              <main className="flex items-center space-x-3 md:flex-row flex-col">
+                <h4 className="font-normal md:text-2xl text-base  space-x-1 lg:space-x-3">
                   <span>
                     {currentMovieDetail
                       ? currentMovieDetail.original_title
@@ -192,6 +193,9 @@ function MoviesDetails() {
                       : ""}
                   </span>
                 </h4>
+
+                <div className="flex w-full gap-2 lg:mt-0 mt-2">
+
                 {currentMovieDetail && currentMovieDetail.genres
                   ? currentMovieDetail.genres.map((genre) => (
                       <>
@@ -204,6 +208,7 @@ function MoviesDetails() {
                       </>
                     ))
                   : ""}
+                </div>
               </main>
               <div className="flex">
                 <svg
@@ -219,42 +224,42 @@ function MoviesDetails() {
                     d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
                   />
                 </svg>
-                <h3 className="font-medium text-xl ">
-                  <span className="text-[#E8E8E8]">8.5</span> | 350k
+                <h3 className="font-medium lg:text-xl text-base  ">
+                  <span className="text-[#E8E8E8]">{currentMovieDetail ? currentMovieDetail.vote_average: ""}</span> | {currentMovieDetail ?  + currentMovieDetail.vote_count  : ""}
                 </h3>
               </div>
             </div>
-            <div className="flex">
-              <main className="w-[774px] pr-5">
-                <h3 className="text-xl font-normal leading-8">
+            <div className="flex lg:flex-row flex-col">
+              <main className="lg:w-[774px] md:pr-5 w-full">
+                <h3 className="lg:text-xl text-base font-normal leading-8 lg:pr-0">
                 {currentMovieDetail ? currentMovieDetail.overview : ""}
                 </h3>
 
-                <div className="mt-12">
-                  <h3 className="font-normal text-xl mb-6">
+                <div className="lg:mt-12 mt-3 w-full">
+                  <h3 className="font-normal lg:text-xl mb-6 text-base">
                     Director :{" "}
                     <span className="text-[#BE123C]">Joseph Kosinski</span>
                   </h3>
-                  <h3 className="font-normal text-xl mb-6">
+                  <h3 className="font-normal lg:text-xl mb-6 text-base">
                     Writers :{" "}
                     <span className="text-[#BE123C]">
                       Jim Cash, Jack Epps Jr, Peter Craig
                     </span>
                   </h3>
-                  <h3 className="font-normal text-xl mb-6">
+                  <h3 className="font-normal lg:text-xl mb-6 text-base">
                     Stars:
                     <span className="text-[#BE123C]">
                       Tom Cruise, Jennifer Connelly, Miles Teller
                     </span>
                   </h3>
-                  <div className="flex w-full mb-8">
-                    <button className="bg-[#BE123C] text-xl font-medium text-white px-4 py-2 rounded-xl absolute">
+                  <div className="flex w-full lg:w-auto mb-8 lg:flex-row flex-col">
+                    <button className="bg-[#BE123C] text-xl font-medium text-white px-4 py-2 w-full lg:w-auto rounded-xl lg:absolute relative">
                       Top rated movie #65
                     </button>
                     <input
                       type="text"
                       placeholder="Awards 9 nominations"
-                      className="w-full border pr-2 py-2 pl-[14rem] rounded-xl"
+                      className="w-full border pr-2 py-2 lg:pl-[14rem] pl-4 md:mt-0 mt-4  rounded-xl"
                     />
                   </div>
                 </div>

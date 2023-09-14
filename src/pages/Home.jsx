@@ -43,7 +43,7 @@ const [movies, setmovies]= useState([])
       <Header />
       <main className="mx-auto w-10/12">
         <div className="w-full flex justify-between my-8 ">
-          <h3 className="font-bold text-4xl">Feature Movie</h3>{" "}
+          <h3 className="font-bold lg:text-4xl text-lg">Feature Movie</h3>{" "}
           <p className="font-normal text-rose-700 text-lg flex w-28 justify-center items-center gap-2">
             See more
             <span className="w-4">
@@ -65,7 +65,7 @@ const [movies, setmovies]= useState([])
           </p>
         </div>
 
-        <article className="grid grid-cols-4 gap-y-12 ">
+        <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
           {movies.map((movie, index) => (
              <Link to={`/movie/${movie.id}`} key={index}>
 

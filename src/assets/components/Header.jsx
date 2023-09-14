@@ -5,13 +5,13 @@ function Header() {
   return (
     <>
       <header className="w-w-screen  h-[600px]  ">
-        <div className="mx-auto w-10/12">
-          <nav className="flex items-center justify-between text-white mb-4 pt-5">
+        <div className="mx-auto lg:w-10/12 w-full px-4 lg:px-0 ">
+          <nav className="flex items-center justify-between text-white mb-4 pt-5 flex-wrap">
             <div className="flex items-center gap-6">
               <img src="tv.png" alt="logo" />{" "}
-              <h4 className="text-[24px] font-semibold">MovieBox</h4>
+              <h4 className="lg:text-[24px] text-lg font-semibold">MovieBox</h4>
             </div>
-            <div className="w-[525px] relative">
+            <div className="w-[525px] relative  lg:order-2 order-3 mt-2 lg:mt-0">
               <input
                 type="search"
                 name=""
@@ -37,7 +37,7 @@ function Header() {
                 </svg>
               </span>
             </div>
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 order-2 lg:order-3">
               {" "}
               <h5 className="text-[16px] font-bold">Sign in</h5>{" "}
               <span
@@ -62,11 +62,11 @@ function Header() {
             </div>
           </nav>
           <div className="w-[404px] text-white mt-16">
-            <h1 className=" font-bold text-5xl mb-8 ">
+            <h1 className=" font-bold text-5xl mb-8  ">
               John wick 3: <br /> parabellum
             </h1>
           <Rating/>
-            <h3 className="text-sm font-medium mb-8 mt-8">
+            <h3 className="text-sm font-medium mb-8 mt-8 pr-8">
               John Wick is on the run after killing a member of the
               international assassins' guild, and with a $14 million price tag
               on his head, he is the target of hit men and women everywhere.
