@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 header{
-    background-image: url("Poster.png");
+    background-image: url("/Poster.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

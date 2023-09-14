@@ -1,12 +1,19 @@
 import React from "react";
 import Rating from "./Rating";
 
-function Card() {
+function Card({title, poster_path, release_date,id }) {
+
+    const imageUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
+    const releaseYear = new Date(release_date).getFullYear();
+
+    
+
   return (
     <>
-      <main className="w-[250px] h-[490px]">
+    <p>{id}</p>
+      <main className="w-[250px] cursor-pointer">
         <div className="w-[250px] h-[370px] relative">
-          <img src="testing.png" alt="" className="w-full h-full" />
+          <img src={imageUrl} alt="" className="w-full h-full" />
           <div className="absolute top-0 flex justify-between w-full px-4 mt-4">
             <span className="px-[8px] py-[3px] bg-[#f3f4f69f] rounded-xl text-xs font-bold uppercase flex items-center justify-center">
               tv series
@@ -31,8 +38,8 @@ function Card() {
             </span>
           </div>
         </div>
-        <p className="font-bold text-xs text-gray-400 mt-3 ">USA, 2016 - Current</p>
-        <h3 className="font-bold text-lg mt-6 mb-4" >Stranger Things</h3>
+        <p className="font-bold text-xs text-gray-400 mt-3 ">USA, {releaseYear} - Current</p>
+        <h3 className="font-bold text-lg mt-6 mb-4" >{title}</h3>
 
         <Rating />
 
